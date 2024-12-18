@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="product-list.component.css">
+</head>
+<body>
+
+<section class="product-list">
+    <h1>Our Products</h1>
+    <div class="product-item">
+        <img [src]="product1.pImage" alt="Product 1" class="product-image">
+        <div class="product-details">
+            <h2>{{product1.title}}</h2>
+            <p>{{product1.description}}</p>
+            <span class="price">${{product1.price}}</span>
+            <button class="add-to-cart">{{product1.cart}}</button>
+            <h3>Discount price : {{getDiscountPrice().toFixed(2)}} </h3>
+            <p>{{product1.instock > 0 ? 'only' + product1.instock + 'left' : 'Out of stock'}}</p>
+    <button (click)="decrementCartvalue()" >-</button> 
+    <span>{{addToCart}}</span>
+     <button (click)="incrementCartvalue()" >+</button>
+            <!--<button [disabled]="!(product1.instock > 0)" >Buy Now</button>
+     <input (input)="onNameChange($event)">
+     <br>
+     <p>{{name}}</p> --->
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="https://via.placeholder.com/200" alt="Product 2" class="product-image">
+        <div class="product-details">
+            <h2>{{title2}}</h2>
+            <p>{{description2}}</p>
+            <span class="price">{{'$'+price2}}</span>
+            <button class="add-to-cart">{{cart2}}</button>
+           
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="https://via.placeholder.com/200" alt="Product 3" class="product-image">
+        <div class="product-details">
+            <h2>{{title3}}</h2>
+            <p>{{description3}}</p>
+            <span class="price">${{price3}}</span>
+            <button class="add-to-cart">{{cart3}}</button>
+        </div>
+    </div>
+</section>
+<div *ngFor="let item of listOfProducts">
+    <p>Current value: {{item}}</p>
+</div>
+</body>
+</html>
+

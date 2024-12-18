@@ -1,0 +1,60 @@
+/* Basic Reset */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0026ff;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo h1 {
+    font-size: 2em;
+    margin: 0;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main p {
+    font-size: 1.2em;
+}

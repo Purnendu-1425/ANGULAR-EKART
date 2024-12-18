@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <link rel="stylesheet" href="search.component.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search..." [(ngModel)]="searchText" >
+
+        <button [ngClass]="{'search-button': searchText, 'search-button-disabled': !searchText}"  [disabled]="!searchText">Search</button>
+    </div>
+</body>
+</html>
+<div class="search-result-for"><p *ngIf="searchText !=''"><strong>Search result for:</strong> {{searchText}}</p></div>
